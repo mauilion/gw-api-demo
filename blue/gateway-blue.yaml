@@ -1,0 +1,20 @@
+---
+apiVersion: gateway.networking.k8s.io/v1
+kind: Gateway
+metadata:
+  name: gateway-blue
+  namespace: tenant-blue
+spec:
+  infrastructure:
+    labels:
+      color: blue
+    annotations:
+      "io.cilium/lb-ipam-ips": "20.0.10.100"
+  gatewayClassName: cilium
+  listeners:
+  - protocol: HTTP
+    port: 80
+    name: gateway-blue-http
+    allowedRoutes:
+      namespaces:
+        from: Same

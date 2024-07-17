@@ -1,0 +1,8 @@
+resources:
+  - ns.yaml
+  - red
+  - yellow
+  - blue
+  - app
+
+

@@ -1,0 +1,18 @@
+---
+apiVersion: gateway.networking.k8s.io/v1
+kind: Gateway
+metadata:
+  name: gateway-red
+  namespace: tenant-red
+spec:
+  infrastructure:
+    labels:
+      color: red
+  gatewayClassName: cilium
+  listeners:
+  - protocol: HTTP
+    port: 80
+    name: gateway-red-http
+    allowedRoutes:
+      namespaces:
+        from: Same

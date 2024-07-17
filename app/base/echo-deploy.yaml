@@ -1,0 +1,26 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  creationTimestamp: null
+  labels:
+    app: echo
+  name: echo
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: echo
+  strategy: {}
+  template:
+    metadata:
+      creationTimestamp: null
+      labels:
+        app: echo
+    spec:
+      containers:
+      - image: inanimate/echo-server
+        name: echo-server
+        ports:
+        - containerPort: 8080
+        resources: {}
+status: {}

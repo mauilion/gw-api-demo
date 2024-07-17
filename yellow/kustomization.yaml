@@ -1,0 +1,4 @@
+resources:
+- ip-pool-yellow.yaml
+- gateway-yellow.yaml
+- httproute-yellow.yaml

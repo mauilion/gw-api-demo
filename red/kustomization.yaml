@@ -1,0 +1,4 @@
+resources:
+- ip-pool-red.yaml
+- gateway-red.yaml
+- httproute-red.yaml
